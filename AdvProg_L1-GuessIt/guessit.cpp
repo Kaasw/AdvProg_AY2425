@@ -14,8 +14,9 @@ using namespace std;
 ***/
 int generateRandomNumber() {
     // TODO: Return the random number in range 1 to 100
-
-    return 1000;
+    srand(time(0));
+    int number = rand() % 100 + 1;
+    return number;
 }
 
 
@@ -70,9 +71,9 @@ string getAnswer(int number, int randomNumber) {
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
     if (answer == "Congratulation! You win.") {
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }
 
 
